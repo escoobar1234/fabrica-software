@@ -1,0 +1,10 @@
+salario = float(input("digite o valor do salario"))
+c1 = float(input("digite o valor da conta 1"))
+c2 = float(input("digite o valor da conta 2"))
+
+m_c1 = (c1 * 2 / 100)
+m_c2 = (c2 * 2 / 100)
+conta1 = (m_c1 + c1)
+conta2 = (m_c2 + c2)
+s_f = (salario - conta1 - conta2)
+print(f"o salario depois de pagar as contas é R${s_f}")
