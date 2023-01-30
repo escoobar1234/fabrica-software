@@ -1,0 +1,11 @@
+encontrado=0
+numeros=[]
+for c in range(3):
+    numeros.append(int(input(f'digite o numero  {c+1}: ')))
+num = int(input("numero para verificar: "))
+for c in range(len(numeros)):
+    if num == numeros[c] :
+        encontrado = 1
+        print("encontrou")
+    else:
+       print("Não encontrou")
