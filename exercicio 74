@@ -1,0 +1,5 @@
+numeros=[]
+for c in range(5):
+    numeros.append(int(input(f'digite o numero  {c+1}: ')))
+for c in range(len(numeros)):
+    print(f"{numeros[c]}")
