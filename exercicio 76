@@ -1,0 +1,9 @@
+listaNotas = []
+media = 0
+print ('Informe as 4 notas')
+for i in range(4):
+    listaNotas.append(float(input(f'Nota {i+1}:\n')))
+    media += listaNotas[i]
+    media1 = media/4
+print (listaNotas)
+print (f'{media1:.2f}')
