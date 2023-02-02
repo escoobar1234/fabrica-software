@@ -1,0 +1,16 @@
+num = []
+contpar = contimpar = 0
+impar = []
+par = []
+for c in range(3):
+    num.append(int(input("digite um numero:")))
+for c in range(3):
+    if num[c] % 2 == 0:
+        impar.append(num[c])
+        contpar += 1
+    else:
+        par.append(num[c])
+        contimpar += 1
+print(impar)
+print(par)
+print(num)
