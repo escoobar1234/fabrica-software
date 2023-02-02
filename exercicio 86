@@ -1,0 +1,9 @@
+salario = float(input("Digite o valor do seu salario:"))
+financi = float(input("digite o valor do financiamento:"))
+consut = salario * 5
+
+if financi <= consut:
+    print("Financiamento Concedido")
+else:
+    print("Financiamento Negado")
+print("Obrigado por Consultar")
