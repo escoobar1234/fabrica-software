@@ -1,0 +1,9 @@
+num = []
+soma = 0
+for i in range(5):
+    num.append(int(input("digite um número inteiro:")))
+    soma = soma + (num[i])
+print(f"{soma}")
+print("-"*5)
+for i in range(5):
+    print(f"{num[i]}")
