@@ -1,0 +1,20 @@
+prof1 = []
+prof2 = []
+salario1 = []
+salario2 = []
+prof1.append(input("Digite o nome do Prof.1:"))
+hora1 = int(input("Digite quantas horas o Prof.1 trabalhou: "))
+valor1 = int(input("Digite o valor da hora/aula do Prof.1"))
+salario1.append(hora1 * valor1)
+print("-"*50)
+prof2.append(input("Digite o nome do Prof.2:"))
+hora2 = int(input("Digite quantas horas o Prof.2 trabalhou: "))
+valor2 = int(input("Digite o valor da hora/aula do Prof.2 :"))
+salario2.append(hora2*valor2)
+
+if salario1 > salario2:
+    print(f" Prof.{prof1} tem o maior salario")
+elif salario2 > salario1:
+    print(f"Prof.{prof2} tem o maior salario")
+else:
+    print("Os dois recebem o mesmo salario")
