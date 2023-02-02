@@ -1,0 +1,11 @@
+lista_conso = []
+caracteres = []
+contconso = 0
+for i in range(10):
+    caracteres.append(str(input(f"Insira o {i+1} caractere: ")))
+for c in range(10):
+    if caracteres[c] != 'a' and caracteres[c] != 'e' and caracteres[c] != 'i' and caracteres[c] != 'o':
+        lista_conso.append(caracteres[c])
+        contconso += 1
+print("Lista de consoantes: ",format(lista_conso))
+print("Total Consoantes: ",format(contconso))
