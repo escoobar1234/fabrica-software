@@ -1,0 +1,21 @@
+NdeEsfera = 0
+NdeLimpeza = 0
+NdeTdoCaboOuConect = 0
+QuebradoouInutili = 0
+
+for i in range(100):
+    condicao = int(input("Digite '1' para Necessita da esfera,'2' necessita de limpeza,'3'necessita troca do cabo ou conector,'4'quebrado ou inutilizado"))
+    if condicao == 1:
+        NdeEsfera += 1
+    elif condicao == 2:
+        NdeLimpeza += 1
+    if condicao == 3:
+        NdeTdoCaboOuConect += 1
+    elif condicao == 4:
+        QuebradoouInutili += 1
+
+print(f"Situação                            quantidade           Percentual")
+print(f"Necessita de esfera                   {NdeEsfera}                     {NdeEsfera}%")
+print(f"Necessita de limpeza                  {NdeLimpeza}                     {NdeLimpeza}%")
+print(f"Necessita troca de cabo po conector   {NdeTdoCaboOuConect}                     {NdeTdoCaboOuConect}%")
+print(f"Quebrado ou inutilizao                {QuebradoouInutili}                     {QuebradoouInutili}%")
