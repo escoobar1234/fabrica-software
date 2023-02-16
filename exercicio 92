@@ -1,0 +1,40 @@
+positivo = negativo = 0
+
+print('Responda: 1 - SIM, 2 - NÃO')
+
+telefonou = int(input('Telefonou para a vítima? '))
+if telefonou == 1:
+    positivo += 1
+
+esteve = int(input("Esteve no local do crime? "))
+
+if esteve == 1:
+    positivo += 1
+
+moradia = int(input('Mora perto da vítima? '))
+
+if moradia == 1:
+    positivo += 1
+
+dividia = int(input('Devia para a vítima? '))
+
+if dividia == 1:
+    positivo += 1
+
+
+trabalho = int(input('Já trabalhou com a vítima? '))
+if trabalho == 1:
+    positivo += 1
+
+
+if  1<= positivo <= 2:
+    print('Suspeito')
+
+elif 2 < positivo <= 4:
+    print('Cúmplice')
+
+elif positivo == 5:
+    print('Assasino')
+
+else:
+    print('Inocente')
