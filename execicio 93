@@ -1,0 +1,25 @@
+meses = [
+    'Janeiro',
+    'Fevereiro',
+    'Março',
+    'Abril',
+    'Maio',
+    'Junho',
+    'Julho',
+    'Agosto',
+    'Setembro',
+    'Outubro',
+    'Novembro',
+    'Dezembro']
+medias = []
+for c in range(12):
+    medias.append(float(input(f'\nDigite a temperatura média do més {meses[c]}: ')))
+
+media = sum(medias) / 12
+
+print(f'A média anual é {media}')
+
+print('Os meses com a temperatura acima da média anual: ')
+for c in range(12):
+    if medias[c] > media:
+        print(f'{c+1} - {meses[c]}')
