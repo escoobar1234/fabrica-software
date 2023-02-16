@@ -1,0 +1,13 @@
+idade = []
+altura = []
+contador = 0
+
+for i in range(3):
+    idade.append(int(input(f"Digite a idade o aluno {i+1}:")))
+    altura.append(float(input(f"Digite a altura do aluno {i+1}")))
+    media = sum(altura) / 3
+    if idade[i] > 13 and altura[i] > media:
+        contador += 1
+
+print(f"A media de altura é: {media:.2f}")
+print(f"A quantidade de alunos com altura acima da media é: {contador}")
