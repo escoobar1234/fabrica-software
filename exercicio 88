@@ -1,0 +1,37 @@
+numeros = []
+numeros1 = []
+soma = mediaBaixo = mediaAcima = 0
+cont = 0
+num = 0
+while True:
+    num = int(input("digite um numero:"))
+    if num == -1:
+        break
+    else:
+        numeros.append(num)
+        numeros1.append(num)
+        soma += num
+        media = soma / len(numeros)
+numeros1.reverse()
+print("Quantidade de numeros",len(numeros))
+print("-"*20)
+print("Numero digitados:",numeros)
+print("-"*20)
+for i in range(len(numeros)):
+    print(f"Numeros invertidos: {numeros1[i]}")
+print("-"*20)
+print(f"Soma: {soma}")
+print("-"*20)
+print(f"Media :{media}")
+print("-"*20)
+for c in range(len(numeros)):
+    if numeros[c] > media:
+        mediaAcima +=1
+        print("Numeros acima da media:",mediaAcima)
+print("-"*20)
+for c in range(len(numeros)):
+    if numeros[c] < 7 :
+        mediaBaixo += 1
+        print(f"Numeros abaixo de 7: {mediaBaixo}")
+print("-"*20)
+print("programa encerrado")
