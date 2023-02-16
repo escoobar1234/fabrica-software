@@ -1,0 +1,36 @@
+#WS = Windows Server
+cont =0
+ws = 0
+unix = 0
+linux =0
+netware = 0
+mac = 0
+outros = 0
+while True:
+    votos = int(input("digite '1' para Windows Server,'2' Unix,'3' linux,'4' Netware,'5' Mac OS, '6' Outro"))
+    if votos == 0:
+        break
+    else:
+        if votos == 1 or votos == 2 or votos == 3 or votos == 4 or votos == 5 or votos == 6:
+            cont += 1
+            if votos == 1:
+                ws += 1
+            elif votos == 2:
+                unix += 1
+            if votos == 3:
+                linux += 1
+            elif votos == 4:
+                netware += 1
+            if votos == 5:
+                mac += 1
+            elif votos == 6:
+                outros += 1
+print('-'*50)
+print(f"Sistema Operacional",'-'*8,'votos','-'*5,' %')
+print(f"Windows Server     ",'-'*10, ws,'-'*7,f'{(ws * 100)/ cont:.2f}')
+print(f"Unix               ",'-'*10, unix,'-'*7,f'{(unix * 100)/ cont:.2f}')
+print(f"linux              ",'-'*10,linux,'-'*7,f'{(linux * 100 )/ cont:.2f}')
+print(f"Netware            ",'-'*10,netware,'-'*7,f'{(netware * 100)/ cont:.2f}')
+print(f"Mac OS             ",'-'*10,mac    ,'-'*7,f'{(mac * 100)/ cont:.2f}')
+print(f"Outro              ",'-'*10,outros  ,'-'*7,f'{(outros * 100)/ cont:.2f}')
+print(f"Total              ",'-'*10,cont,'-'*13)
