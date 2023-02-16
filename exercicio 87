@@ -1,0 +1,14 @@
+peso = float(input("DIgite o peso da encomenda:"))
+
+if peso <= 0.5:
+    preco = 1.10
+    print(f"Total a pagar é: R${preco:.2f}")
+elif peso > 0.5 and peso <= 2:
+   preco = 2.20
+   print(f"Total a pagar é: R${preco:.2f}")
+if peso > 2 and peso <= 10:
+    preco = 3.70
+    print(f"Total a pagar é: {preco:.2f}")
+elif peso > 10 :
+    preco = 5 + (peso - 10) * 3.80
+    print(f"Total a pagar é: R${preco:.2f}")
