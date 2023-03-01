@@ -1,37 +1,62 @@
-numeros = []
-numeros1 = []
-soma = mediaBaixo = mediaAcima = 0
-cont = 0
-num = 0
+print('*'*30)
+print('1--Normal --- R$ 1,05')
+print('2--Expresso --- R$ 1,52')
+print('3--Cappucinno --- R$ 2,17')
+print('4--Mocaccino --- R$ 2,36')
+print('*'*30)
+
 while True:
-    num = int(input("digite um numero:"))
-    if num == -1:
+    cafe = int(input('Digite seu pedido:'))
+    if cafe == 1 or cafe == 2 or cafe == 3 or cafe == 4:
+        if cafe == 1:
+            valor_cafe = 1.05
+        elif cafe == 2:
+            valor_cafe = 1.53
+        elif cafe == 3:
+            valor_cafe = 2.17
+        elif cafe == 4:
+            valor_cafe = 2.36
         break
     else:
-        numeros.append(num)
-        numeros1.append(num)
-        soma += num
-        media = soma / len(numeros)
-numeros1.reverse()
-print("Quantidade de numeros",len(numeros))
-print("-"*20)
-print("Numero digitados:",numeros)
-print("-"*20)
-for i in range(len(numeros)):
-    print(f"Numeros invertidos: {numeros1[i]}")
-print("-"*20)
-print(f"Soma: {soma}")
-print("-"*20)
-print(f"Media :{media}")
-print("-"*20)
-for c in range(len(numeros)):
-    if numeros[c] > media:
-        mediaAcima +=1
-        print("Numeros acima da media:",mediaAcima)
-print("-"*20)
-for c in range(len(numeros)):
-    if numeros[c] < 7 :
-        mediaBaixo += 1
-        print(f"Numeros abaixo de 7: {mediaBaixo}")
-print("-"*20)
-print("programa encerrado")
+        print('Pedido invalido tente novamente.')
+
+while True:
+    valor = float(input("digite o valor que você ira pagar:"))
+    if valor >= valor_cafe:
+        break
+    else:
+        print('valor inserido é menor que o de seu pedido.')
+        print('insira um valor maior.')
+troco1 = valor - valor_cafe
+
+troco = valor - valor_cafe
+
+real = troco // 1.0
+troco = troco - (real * 1.0)
+
+c50 = troco // 0.5
+troco = troco - (c50 * 0.5)
+
+c25 = troco // 0.25
+troco = troco - (c25 * 0.25)
+
+c10 = troco // 0.10
+troco = troco - (c10 * 0.1)
+
+c5 = troco // 0.05
+troco = troco - (c5 * 0.05)
+
+um = 0
+
+while troco >= 0:
+    um += 1
+    troco = troco - 0.01
+
+print(f'O valo do troco é:   {troco1:.2f}')
+print(f'moedas de 1 real:    {real:.0f}')
+print(f'Moedas de 50 centavos:    {c50:.0f}')
+print(f'Moedas de 25 centavos:    {c25:.0f}')
+print(f'Moedas de 10 centavos:    {c10:.0f}')
+print(f'moedas de 5 centavos:    {c5:.0f}')
+print(f'Moedas de 1 centavo:    {um:.0f}')
+
